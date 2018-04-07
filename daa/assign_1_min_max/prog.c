@@ -1,3 +1,10 @@
+/*
+ * Author - Vaishnav Mhetre
+ * Created at - Sunday, 8th April - 2:00 am
+ * 
+ */
+
+
 #include<stdio.h>
 
 #define MAX 50              // Max limit of array (haystack) elements - any array
