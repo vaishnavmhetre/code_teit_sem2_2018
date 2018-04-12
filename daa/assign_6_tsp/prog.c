@@ -1,8 +1,8 @@
 /*
  * Author - Vaishnav Mhetre
- * Created at - Sunday, 10th April - 3:37 am
- * Bellman Ford Algorithm - Find Shortest path from
- * some source to destination in a Graph
+ * Created at - Sunday, 13th April - 2:00 am
+ * Travelling salesman problem - 
+ * to find the shortest path visiting every node in graph
  */
 
 #include <limits.h>
