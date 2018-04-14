@@ -1,8 +1,8 @@
 /*
  * Author - Vaishnav Mhetre
- * Created at - Sunday, 13th April - 2:00 am
- * Travelling salesman problem - 
- * to find the shortest path visiting every node in graph
+ * Created at - Sunday, 10th April - 3:37 am
+ * Bellman Ford Algorithm - Find Shortest path from
+ * some source to destination in a Graph
  */
 
 #include <limits.h>
@@ -136,7 +136,7 @@ int calculateCost(int mat[MAX][MAX], int n, int path[MAX], int pathCount, int pa
 }
 
 /*
- * Get minimium lower bound from haystack
+ * Get minimum lower bound from haystack
  *
  * @function int getMinR
  * @param int[] haystack - Haystack for search
@@ -158,7 +158,7 @@ int getMinR(int haystack[MAX], int n) {
  * Processing each child over reduction and lower bound discovery for next vertex discovery
  *
  * @function int processor
- * @param int[][] mat - Opearatibve matrix
+ * @param int[][] mat - Operative matrix
  * @param int[] path - Resultant route
  * @param int n - Amount of elements in haystack
  * @param int[] relativePath - Relative path/tree of vertex connections
@@ -249,6 +249,8 @@ void viewPath(int path[MAX], int n, int src){
         if(iter != n)
             printf(" => ");             // If last vertex, don't print arrow
     }while (iter != n);                 // Run till all vertices covered
+
+    printf("%d", src+1);
 }
 
 /*
@@ -316,6 +318,6 @@ int main() {
 
 28
 
-1 => 4 => 2 => 5 =>
+1 => 4 => 2 => 5 => 3
 
  */
