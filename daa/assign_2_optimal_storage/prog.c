@@ -175,7 +175,7 @@ int getRT(Program programs[MAX], int progIndex) {
     int rt = 0;
 
     for (int i = 0; i <= progIndex; ++i) {
-        for (int j = 0; j <= i; ++j) {
+        for (int j = 0; j <= progIndex-i; ++j) {
             rt += programs[j].length;
         }
     }
@@ -223,6 +223,8 @@ int main() {
         scanf("%s %d", programs[i].name, &programs[i].length);
     }
 
+    sort(programs, 0, progCount-1);
+
     printf("\n");
     printf("%d", getMRT(programs, progCount));
 
@@ -230,8 +232,6 @@ int main() {
     for (int i = 0; i < progCount; ++i) {
         printf("{%s,%d} ", programs[i].name, programs[i].length);
     }
-
-    sort(programs, 0, progCount-1);
 
     printf("\n\n");
     for (int i = 0; i < progCount; ++i) {
@@ -292,9 +292,9 @@ pg3 3
  * OUTPUT
  *
 
-12
+9
 
-{pg1,5} {pg2,10} {pg3,3}
+{pg3,3} {pg1,5} {pg2,10}
 
 {pg3,3} {pg1,5} {pg2,10}
 
